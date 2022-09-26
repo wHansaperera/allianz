@@ -3,29 +3,33 @@ package company;
 
 public class SeniorStaff extends Staff{
     
+     double basic_s;
+    double profitshare;
     
+    public SeniorStaff(String name,String destination,String department){
+    super(name, destination, department);
+   
     
+    }
     public void display(){
-        System.out.println("Name : "+name);
-        System.out.println("");
+       System.out.println("Name : "+name);
+        System.out.println("Destination : "+destination);
+        System.out.println("Department : "+department);
+        
     
     }
     public double calAdvance(double slryAd){
-    return (50/100)*slryAd;
+        double adv=slryAd*0.5;
+    return adv;
     }
 
-    public SeniorStaff(String name,String destination,String department){
-    super(name, destination, department);
-    }
+   
 
     @Override
     public double  calSalary() {
        
         
-        
-        double basic = 0;
-       double profitshare=0;
-       double salary=basic+profitshare;
+       double salary=basic_s+profitshare;
        return salary;
        
        

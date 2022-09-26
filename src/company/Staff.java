@@ -4,8 +4,8 @@ package company;
 
 abstract public class Staff {
    static public String name;
-   static public String destination;
-   static public String department;
+    public String destination;
+    public String department;
     abstract public double calSalary();
 
     public Staff(String name, String destination, String department) {
